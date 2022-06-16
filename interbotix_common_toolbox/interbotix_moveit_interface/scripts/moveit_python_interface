@@ -46,7 +46,8 @@ class MoveGroupPythonIntefaceTutorial(object):
     rospy.init_node('moveit_python_interface')
 
     ## Get the name of the robot - this will be used to properly define the end-effector link when adding a box
-    self.robot_model = rospy.get_param("~robot_model")
+    # self.robot_model = rospy.get_param("~robot_model")
+    self.robot_model = "vx300s"
     self.robot_name = rospy.get_namespace().strip("/")
     self.ee_link_offset = rospy.get_param("~ee_link_offset")
     self.joint_goal = rospy.get_param("~joint_goal")
